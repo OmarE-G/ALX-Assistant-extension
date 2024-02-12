@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Structure</title>
+    <style>
+        /* popup.css */
+        html {
+            width: 300px; /* max: 1000px */
+            height: 750px; /* max: 750px */
+        }
+
+        /* Base styles for the entire popup */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 400px; /* Adjust the maximum width as needed */
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .directory {
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .directory-name {
+            font-weight: bold;
+            cursor: pointer; /* Add cursor pointer for expand/collapse */
+        }
+        .file-list {
+            margin-left: 20px; /* Indent file list */
+            display: none; /* Hide by default */
+        }
+        .file {
+            margin-bottom: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ALX assistant</h1>
+    <h3>Project's directory structure</h3>
+
+    <!-- Directory structure will be dynamically generated here -->
+    <div id="directoryStructure"></div>
+    <button id="button">Copy creation command</button> 
+    <script src="popup.js"></script>
+</body>
+</html>

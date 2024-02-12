@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "ALX assistant",
+    "version": "1.0",
+    "description": "Extracts directory structure from project pages and generates a unix shell command to recreate it",
+    "permissions": [ "tabs",
+    "activeTab",
+    "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://intranet.alxswe.com/projects/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "100": "100.png"
+      }
+    }
+  }
+  
