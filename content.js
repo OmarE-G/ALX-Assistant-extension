@@ -21,13 +21,15 @@ if (window.location.href.startsWith("https://intranet.alxswe.com/projects/")) {
                 currentDirectory = { name: directoryName, files: [], subdirs: [] };
                 directories.push(currentDirectory);
             }
-        } else if (text.startsWith("File:") && currentDirectory) {
+        } else if (text.startsWith("File:")) {
             // Extract file names
             const fileNames = text.split(":")[1].trim().split(/[\s,]+/);
             // Add file names to the current directory or its subdirectories
             fileNames.forEach((fileName) => {
-                handle_file(fileName, currentDirectory)
-                const parts = fileName.split('/');
+                if(!currentDirectory) 
+                    handle_file(fileName, "")
+                else
+                   handle_file(fileName, currentDirectory)
       
             });
         }
