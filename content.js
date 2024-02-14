@@ -7,7 +7,7 @@ if (window.location.href.startsWith("https://intranet.alxswe.com/projects/")) {
 
     // Initialize variables to keep track of the current directory
     let currentDirectory = {name : "", files: [], subdirs: []};
-
+    directories[0] = currentDirectory;
     // Iterate over all <li> elements
     listItems.forEach((li) => {
         const text = li.textContent.trim();
