@@ -6,7 +6,7 @@ if (window.location.href.startsWith("https://intranet.alxswe.com/projects/")) {
     const directories = [];
 
     // Initialize variables to keep track of the current directory
-    let currentDirectory = null;
+    let currentDirectory = {name : "", files: [], subdirs: []};
 
     // Iterate over all <li> elements
     listItems.forEach((li) => {
@@ -26,9 +26,6 @@ if (window.location.href.startsWith("https://intranet.alxswe.com/projects/")) {
             const fileNames = text.split(":")[1].trim().split(/[\s,]+/);
             // Add file names to the current directory or its subdirectories
             fileNames.forEach((fileName) => {
-                if(!currentDirectory) 
-                    handle_file(fileName, "")
-                else
                    handle_file(fileName, currentDirectory)
       
             });
